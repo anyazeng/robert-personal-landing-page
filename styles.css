@@ -1,0 +1,272 @@
+/* branding colors and fonts */
+:root {
+    --main-color: #55527c;
+    --text-color: #130f49;
+    --yellow-color: #ff972d;
+    --blue-color: #a5a6ff;
+    --background-color:#e8f9f5;
+    --header-background:#fff;
+    --font-inter: "Inter", sans-serif;
+    --font-karla: "Karla", sans-serif;
+    --font-kristi: "Kristi", cursive;
+    --social-color:#130f49
+}
+
+.dark-mode {
+    --background-color:#222;
+    --text-color: #f5f5f5;
+    --link-color: #82c1ff;
+    --link-hover-color: #a7d5ff;
+    --header-background: #495652;
+    --header-text: #f5f5f5;
+    .button-contact {
+        background-color: white;
+      }
+    .button-project {
+        background-color: var(--blue-color);
+        color: #130f49;
+
+    }
+
+}
+
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.special-color {
+    color: var(--blue-color);
+}
+
+.container {
+    display: flex;
+    height: 100hv;
+}
+
+.sidebar {
+    flex:0 0 20%;
+    background-color: var(--header-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-profile-pic {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar-profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--blue-color);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: var(--header-text);
+}
+
+.sidebar nav button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: var(--header-text);
+    cursor:pointer    
+}
+
+.blue-bg {
+   color:var(--blue-color)
+}
+
+.sidebar-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa {
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--social-color);
+    background-color: #ddddeb;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    max-width: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-family: var(--font-karla);
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  section {
+    margin-bottom: 40px;
+    height: 100vh;
+  }
+
+  /* Will have header stick to the left */
+  content {
+    overflow-y: auto;
+    width: 80%;
+  }
+
+  .home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 50px;
+  }
+
+  .home-desc {
+    flex: 0 0 50%;
+    margin-right: 20px;
+
+  }
+
+  .home-desc-title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    font-weight:bold;
+  }
+
+ .home-desc-para {
+    max-width: 400px;
+ }   
+
+  .home-img {
+    max-width: 400px;
+    flex: 0 0 50%;
+  }
+
+  .home-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .home-desc-buttons {
+    height: 50px;
+    width: 200px;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home-desc-buttons button {
+    border: 1.5px solid #130f49;;
+    border-radius: 5px;
+    padding: 9px 40px;
+    white-space: nowrap;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    transition: 0.2s ease;
+  }
+
+  .button-project {
+    background-color: #130f49;
+    color: white;
+  }
+
+  .button-project:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #130f49;
+  }
+
+  .button-contact {
+    background-color: transparent;
+  }
+
+  .button-contact:hover {
+    background-color: #130f49;
+    color: white;
+  }
+  
+
+  .home-desc-contact {
+    border-left: 4px solid var(--yellow-color);
+    font: var(--font-karla);
+    padding: 0 10px;
+}
+
+@media (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .sidebar {
+        display: 0 0 auto;
+    }
+   
+      .sidebar-footer {
+        display: none;
+      }
+    }
+
